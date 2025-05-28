@@ -7,9 +7,10 @@ from torch.utils.data import Dataset
 from torch.hub import download_url_to_file
 from sklearn.preprocessing import LabelEncoder
 from typing import Optional, List
+from pathlib import Path
 
-
-dataset_dir = "/home/jinhyung-son/Bachelor Thesis Project/dataset"
+BASE_DIR = Path()
+dataset_dir = BASE_DIR / "dataset"
 assert dataset_dir, "Specify 'TAU Urban Acoustic Scenes 2022 Mobile' dataset location in 'dataset_dir'. Download from: https://zenodo.org/record/6337421"
 
 # Dataset configuration
